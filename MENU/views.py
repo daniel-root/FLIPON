@@ -1,9 +1,8 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, redirect
 
 # Create your views here.
-def home(request):
-    return HttpResponse("home")
+def home(request,template='home.html'):
+    return render(request, template)
 
-def perfil(request):
-    return HttpResponse("perfil")
+def perfil(request,template='perfil.html'):
+    return render(request, template)
